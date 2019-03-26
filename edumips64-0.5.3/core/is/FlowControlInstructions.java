@@ -25,6 +25,7 @@
 
 package edumips64.core.is;
 
+import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 
@@ -47,7 +48,7 @@ public abstract class FlowControlInstructions extends Instruction {
             e.printStackTrace();
         }
     }
-    public abstract void ID() throws RAWException,IrregularWriteOperationException,IrregularStringOfBitsException,JumpException,TwosComplementSumException;
+    public abstract void ID() throws RAWException,IrregularWriteOperationException,IrregularStringOfBitsException,JumpException,TwosComplementSumException,NotTakenException;
     public abstract void EX() throws IrregularStringOfBitsException,IntegerOverflowException,IrregularWriteOperationException;
     public abstract void MEM() throws IrregularStringOfBitsException,MemoryElementNotFoundException;
     public abstract void WB() throws IrregularStringOfBitsException;

@@ -25,6 +25,7 @@
  */
 
 package edumips64.core.is;
+import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 
@@ -49,7 +50,7 @@ public abstract class FlowControl_IType extends FlowControlInstructions {
         this.paramCount=3;
     }
 
-    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException,JumpException,TwosComplementSumException {
+    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException,JumpException,TwosComplementSumException, NotTakenException {
     }
 
     public void EX() throws IrregularStringOfBitsException, IntegerOverflowException,IrregularWriteOperationException {

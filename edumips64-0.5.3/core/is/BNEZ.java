@@ -25,6 +25,7 @@
 
 package edumips64.core.is;
 
+import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 /** <pre>
@@ -47,7 +48,7 @@ public class BNEZ extends FlowControl_IType
 	}
 
 	public void ID()
-		throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException, TwosComplementSumException 	
+		throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException, TwosComplementSumException, NotTakenException
 	{
 		//getting registers rs and rt
 		if(cpu.getRegister(params.get(RS_FIELD)).getWriteSemaphore() > 0)
@@ -76,6 +77,8 @@ public class BNEZ extends FlowControl_IType
 
 			throw new JumpException(); 
 		}
+		throw new NotTakenException();
+
 	}
 	public void pack() throws IrregularStringOfBitsException {
 

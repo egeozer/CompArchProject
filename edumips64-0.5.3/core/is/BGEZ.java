@@ -23,6 +23,7 @@
  */
 
 package edumips64.core.is;
+import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 /** <pre>
@@ -45,7 +46,7 @@ public class BGEZ extends FlowControl_IType {
         name="BGEZ";
     }
 
-    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException {
+    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException, NotTakenException {
         if(cpu.getRegister(params.get(RS_FIELD)).getWriteSemaphore()>0 )
             throw new RAWException();
         //getting register rs 
@@ -60,24 +61,26 @@ public class BGEZ extends FlowControl_IType {
             String pc_new="";
             Register pc=cpu.getPC();
             String pc_old=cpu.getPC().getBinString();
-            
+
             //subtracting 4 to the pc_old temporary variable using bitset64 safe methods
             BitSet64 bs_temp=new BitSet64();
             bs_temp.writeDoubleWord(-4);
             pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
-            
+
             //updating program counter
             pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
             pc.setBits(pc_new,0);
-             
-            throw new JumpException(); 
-        }    
+
+            throw new JumpException();
+        }
+        throw new NotTakenException();
+
     }
     public void pack() throws IrregularStringOfBitsException {
 	repr.setBits(OPCODE_VALUE, OPCODE_VALUE_INIT);
 	repr.setBits(Converter.intToBin(RS_FIELD_LENGTH, params.get(RS_FIELD)), RS_FIELD_INIT);
 	repr.setBits(RT_VALUE, RT_FIELD_INIT);
-	repr.setBits(Converter.intToBin(OFFSET_FIELD_LENGTH, params.get(OFFSET_FIELD)/4), OFFSET_FIELD_INIT); 
+	repr.setBits(Converter.intToBin(OFFSET_FIELD_LENGTH, params.get(OFFSET_FIELD)/4), OFFSET_FIELD_INIT);
     }
-    
+
 }
