@@ -27,10 +27,14 @@
 
 package edumips64.core.is;
 
+import core.CountController;
+
 /**
  * @author Trubia Massimo, Russo Daniele
  */
 public class JumpException extends Exception {
-
+    public JumpException(){
+        CountController.incrementTakenCount();
+    }
 }
 
