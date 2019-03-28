@@ -79,7 +79,7 @@ public class BEQZ extends FlowControl_IType
              
                     throw new JumpException(); 
 		}
-		throw new NotTakenException();
+		//else{throw new NotTakenException();}
 
 	}
       public void pack() throws IrregularStringOfBitsException {

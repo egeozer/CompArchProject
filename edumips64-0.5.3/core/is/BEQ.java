@@ -73,7 +73,7 @@ public class BEQ extends FlowControl_IType {
              
             throw new JumpException(); 
         }
-            throw new NotTakenException();
+        //else{throw new NotTakenException();}
     }
 
     

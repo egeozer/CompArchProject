@@ -26,6 +26,7 @@ package edumips64.core;
 import java.util.*;
 import java.util.logging.Logger;
 
+import core.is.NotTakenException;
 import edumips64.core.is.*;
 import edumips64.utils.*;
 
@@ -337,6 +338,9 @@ public class CPU {
             if (syncex != null)
                 throw new SynchronousException(syncex);
 
+        } catch (NotTakenException ex){
+            pipe.put(PipeStatus.EX, pipe.get(PipeStatus.ID));
+            //throw ex;
         } catch (RAWException ex) {
             if (currentPipeStatus == PipeStatus.ID)
                 pipe.put(PipeStatus.EX, Instruction.buildInstruction("BUBBLE"));
