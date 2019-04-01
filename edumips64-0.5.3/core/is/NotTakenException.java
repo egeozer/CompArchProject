@@ -10,18 +10,17 @@ public class NotTakenException extends Exception {
     private static final Logger logger = Logger.getLogger(CPU.class.getName());
 
     public NotTakenException(){
-        //CountController.incrementNotTakenCount();
-
         // Check what type of prediction since Not Taken
         if(CountController.isPredictTaken()){
-            if(CountController.isMispredictReached()){
+
+            CountController.incrementMispredictCount();
+            logger.info("Increment misprediction to " + CountController.getMispredictCount());
+
+            if(CountController.isMispredictReached()){ //Error catch condition
                 CountController.changePrediction();
                 logger.info("Changing Prediction to " + CountController.isPredictTaken());
             }
-            else{
-                CountController.incrementMispredictCount();
-                logger.info("Increment misprediction to " + CountController.getMispredictCount());
-            }
+
         }
     }
 }

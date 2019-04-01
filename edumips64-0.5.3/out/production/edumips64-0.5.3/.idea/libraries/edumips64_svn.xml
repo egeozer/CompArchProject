@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="edumips64-svn">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/edumips64-svn.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

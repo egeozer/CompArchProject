@@ -39,19 +39,17 @@ public class JumpException extends Exception {
 
     private static final Logger logger = Logger.getLogger(CPU.class.getName());
 
-    public JumpException(){
-        //CountController.incrementTakenCount();
-
+    public JumpException() {
         // Check what type of prediction since Taken
-        if(!CountController.isPredictTaken()){
-            if(CountController.isMispredictReached()){
+        if (!CountController.isPredictTaken()) {
+            CountController.incrementMispredictCount();
+            logger.info("Increment misprediction to " + CountController.getMispredictCount());
+
+            if (CountController.isMispredictReached()) {
                 CountController.changePrediction();
                 logger.info("Changing Prediction to " + CountController.isPredictTaken());
             }
-            else{
-                CountController.incrementMispredictCount();
-                logger.info("Increment misprediction to " + CountController.getMispredictCount());
-            }
+
         }
     }
 }
