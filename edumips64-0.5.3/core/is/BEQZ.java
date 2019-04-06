@@ -25,6 +25,7 @@
 
 package edumips64.core.is;
 
+import core.CountController;
 import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
@@ -79,7 +80,19 @@ public class BEQZ extends FlowControl_IType
              
                     throw new JumpException(); 
 		}
-		//else{throw new NotTakenException();}
+		else{
+			if(CountController.isPredictTaken()){
+
+				CountController.incrementMispredictCount();
+				logger.info("Increment misprediction to " + CountController.getMispredictCount());
+
+				if(CountController.isMispredictReached()){ //Error catch condition
+					CountController.changePrediction();
+					logger.info("Changing Prediction to " + CountController.isPredictTaken());
+				}
+
+			}
+		}
 
 	}
       public void pack() throws IrregularStringOfBitsException {

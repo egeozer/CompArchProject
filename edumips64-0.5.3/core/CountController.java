@@ -2,7 +2,7 @@ package core;
 
 public class CountController {
     private static int nBitPredictor = 2; //default is 2, set to n-bit >0
-    private static boolean predictTaken = false;
+    private static boolean predictTaken = true;
     private static int mispredictCount = 0;
 
     public static void incrementMispredictCount(){

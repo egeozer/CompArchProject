@@ -22,9 +22,8 @@
  */
 
 package edumips64.ui;
-import edumips64.core.*;
 import edumips64.utils.*;
-import java.util.*;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -35,7 +34,7 @@ import javax.swing.*;
 public class GUIStatistics extends GUIComponent {
 
 	StatPanel statPanel;
-	private int nCycles, nInstructions, rawStalls, codeSize;
+	private int nCycles, nInstructions, rawStalls, codeSize, branchTakenStalls, branchMispredictionStalls;
 	private float cpi;
 	
 	public GUIStatistics () 
@@ -75,6 +74,12 @@ public class GUIStatistics extends GUIComponent {
 			cpi = (float)nCycles/(float)nInstructions;
 		}
 		rawStalls = cpu.getRAWStalls();
+		if(cpu.isPredictionTaken()) {
+			branchTakenStalls = cpu.getBranchPreidctionStalls();
+		}
+		else{
+			branchMispredictionStalls = cpu.getBranchPreidctionStalls();
+		}
 		codeSize = (cpu.getMemory().getInstructionsNumber())*4;
 	}
 
@@ -143,6 +148,7 @@ public class GUIStatistics extends GUIComponent {
 							label.setText(" " + rawStalls + " " + CurrentLocale.getString("RAWS"));
 						else
 							label.setText(" " + rawStalls + " " + CurrentLocale.getString("RAW"));
+
 						label.setFont(f);
 						return label;
 					case 8:
@@ -158,11 +164,11 @@ public class GUIStatistics extends GUIComponent {
 						label.setFont(f);
 						return label;
 					case 11:
-						label.setText(" 0 " + CurrentLocale.getString("BTS"));
+						label.setText(" " + branchTakenStalls + " " + CurrentLocale.getString("BTS"));
 						label.setFont(f);
 						return label;
 					case 12:
-						label.setText(" 0 " + CurrentLocale.getString("BMS"));
+						label.setText(" " + branchMispredictionStalls + " " + CurrentLocale.getString("BMS"));
 						label.setFont(f);
 						return label;
 					case 13:

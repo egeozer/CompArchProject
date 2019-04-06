@@ -26,6 +26,7 @@ package edumips64.core;
 import java.util.*;
 import java.util.logging.Logger;
 
+import core.CountController;
 import core.is.NotTakenException;
 import edumips64.core.is.*;
 import edumips64.utils.*;
@@ -218,7 +219,14 @@ public class CPU {
      * @return an integer
      */
     public int getRAWStalls() {
+        System.out.println(getBranchPreidctionStalls());
         return RAWStalls;
+    }
+    public int getBranchPreidctionStalls() {
+        return CountController.getMispredictCount();
+    }
+    public boolean isPredictionTaken() {
+        return CountController.isPredictTaken();
     }
 
     /**
