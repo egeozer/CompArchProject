@@ -321,6 +321,7 @@ public class CPU {
                 Instruction nextInstructName = pipe.get(PipeStatus.IF);
                 String instructionName = nextInstructName.getName();
 
+                // Load branched instruction if predict taken
                 if(instructionName.equals("BEQ") || instructionName.equals("BEQZ") || instructionName.equals("BGEZ") || instructionName.equals("BNE")
                         || instructionName.equals("BNEZ")){
                     if(CountController.isPredictTaken()){
@@ -328,8 +329,8 @@ public class CPU {
                         if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
                             offsetField = 2;
                         }
-                        int offset = nextInstructName.getParams().get(offsetField);
-                        pc.writeDoubleWord((pc.getValue()) + 4 + offset);
+                        CountController.setOffsetPC(nextInstructName.getParams().get(offsetField));
+                        pc.writeDoubleWord((pc.getValue()) + 4 + CountController.getOffsetPC());
                     }
                     else {
                         pc.writeDoubleWord((pc.getValue()) + 4);

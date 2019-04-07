@@ -63,24 +63,42 @@ public class BNEZ extends FlowControl_IType
 		boolean condition = ! rs.equals(zero);
 		if(condition)
 		{
-			String pc_new="";
-			Register pc=cpu.getPC();
-			String pc_old=cpu.getPC().getBinString();
+			if(CountController.isPredictTaken()){
+//				String pc_new="";
+//				Register pc=cpu.getPC();
+//				String pc_old=cpu.getPC().getBinString();
+//
+//				//subtracting 4 to the pc_old temporary variable using bitset64 safe methods
+//				BitSet64 bs_temp=new BitSet64();
+//				bs_temp.writeDoubleWord(-4);
+//				pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
+//
+//				//updating program counter
+//				//pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
+//				pc.setBits(pc_old,0);
+			}
+			else{
+				String pc_new="";
+				Register pc=cpu.getPC();
+				String pc_old=cpu.getPC().getBinString();
 
-			//subtracting 4 to the pc_old temporary variable using bitset64 safe methods
-			BitSet64 bs_temp=new BitSet64();
-			bs_temp.writeDoubleWord(-4);
-			pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
+				//subtracting 4 to the pc_old temporary variable using bitset64 safe methods
+				BitSet64 bs_temp=new BitSet64();
+				bs_temp.writeDoubleWord(-4);
+				pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
 
-			//updating program counter
-			pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
-			pc.setBits(pc_new,0);
+				//updating program counter
+				pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
+				pc.setBits(pc_new,0);
+				throw new JumpException();
+			}
 
-			throw new JumpException(); 
+
 		}
 		else{
+			// Misprediction:
 			if(CountController.isPredictTaken()){
-
+				// Change Prediction Miscount
 				CountController.incrementMispredictCount();
 				logger.info("Increment misprediction to " + CountController.getMispredictCount());
 
@@ -88,6 +106,20 @@ public class BNEZ extends FlowControl_IType
 					CountController.changePrediction();
 					logger.info("Changing Prediction to " + CountController.isPredictTaken());
 				}
+
+				// Change PC offset: CPU changed the offset, need to change it back to + 4
+				String pc_new="";
+				Register pc=cpu.getPC();
+				String pc_old=cpu.getPC().getBinString();
+
+				//subtracting 4 to the pc_old temporary variable using bitset64 safe methods
+				BitSet64 bs_temp=new BitSet64();
+				bs_temp.writeDoubleWord(-4 - CountController.getOffsetPC());
+				pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
+
+				//updating program counter
+				pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
+				pc.setBits(pc_new,0);
 
 			}
 		}
