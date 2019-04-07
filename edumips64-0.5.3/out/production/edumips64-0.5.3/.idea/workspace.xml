@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2766abab-3ea5-4938-84e4-962fac6372fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/CPU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/core/CountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/core/CountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$CPUStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$CPUStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$PipeStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$PipeStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$R0.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$R0.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BEQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BEQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BEQZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BEQZ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BGEZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BGEZ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNEZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNEZ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics$MyListCellRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics$MyListCellRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics$StatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics$StatPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/GUIStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/ui/GUIStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/MessagesBundle_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/utils/MessagesBundle_en.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,16 +14,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/CPU.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="325" column="72" lean-forward="true" selection-start-line="325" selection-start-column="72" selection-end-line="325" selection-end-column="72" />
+            <state relative-caret-position="390">
+              <caret line="328" column="58" selection-start-line="328" selection-start-column="58" selection-end-line="328" selection-end-column="58" />
               <folding>
                 <element signature="e#4507#4508#0" expanded="true" />
                 <element signature="e#4536#4537#0" expanded="true" />
@@ -63,21 +49,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/JumpException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/is/NotTakenException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="357">
               <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,8 +63,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/CountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="197" column="90" selection-start-line="197" selection-start-column="84" selection-end-line="197" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/MessagesBundle_en.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -100,24 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
               <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BEQZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BGEZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -156,6 +131,8 @@
       <find>predict</find>
       <find>getinstruc</find>
       <find>get</find>
+      <find>CSIZE</find>
+      <find>codeSi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,6 +151,8 @@
         <option value="$PROJECT_DIR$/core/is/JumpException.java" />
         <option value="$PROJECT_DIR$/core/CountController.java" />
         <option value="$PROJECT_DIR$/core/CPU.java" />
+        <option value="$PROJECT_DIR$/utils/MessagesBundle_en.properties" />
+        <option value="$PROJECT_DIR$/ui/GUIStatistics.java" />
       </list>
     </option>
   </component>
@@ -265,12 +244,21 @@
       <workItem from="1553634218541" duration="8283000" />
       <workItem from="1554127490979" duration="2158000" />
       <workItem from="1554582018780" duration="2904000" />
-      <workItem from="1554666720975" duration="1014000" />
+      <workItem from="1554666720975" duration="2558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16215000" />
+    <option name="totallyTimeSpent" value="17759000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -286,12 +274,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18599562" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -366,13 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1486">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -387,23 +368,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/NotTakenException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/CountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -451,8 +415,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/CPU.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="325" column="72" lean-forward="true" selection-start-line="325" selection-start-column="72" selection-end-line="325" selection-end-column="72" />
+        <state relative-caret-position="390">
+          <caret line="328" column="58" selection-start-line="328" selection-start-column="58" selection-end-line="328" selection-end-column="58" />
           <folding>
             <element signature="e#4507#4508#0" expanded="true" />
             <element signature="e#4536#4537#0" expanded="true" />
@@ -465,6 +429,61 @@
             <element signature="e#13509#13510#0" expanded="true" />
             <element signature="e#13534#13535#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/NotTakenException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/JNumberField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/edumips64-svn.jar!/edumips64/utils/MessagesBundle_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/MessagesBundle_it.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="197" column="90" selection-start-line="197" selection-start-column="84" selection-end-line="197" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/MessagesBundle_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
         </state>
       </provider>
     </entry>

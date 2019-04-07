@@ -318,15 +318,22 @@ public class CPU {
                 pipe.put(PipeStatus.IF, mem.getInstruction(pc));
                 old_pc.writeDoubleWord((pc.getValue()));
 
-                if(CountController.isPredictTaken()){
-                    Instruction nextInstructName = pipe.get(PipeStatus.IF);
-                    String instructionName = nextInstructName.getName();
-                    int offsetField = 1;
-                    if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
-                        offsetField = 2;
+                Instruction nextInstructName = pipe.get(PipeStatus.IF);
+                String instructionName = nextInstructName.getName();
+
+                if(instructionName.equals("BEQ") || instructionName.equals("BEQZ") || instructionName.equals("BGEZ") || instructionName.equals("BNE")
+                        || instructionName.equals("BNEZ")){
+                    if(CountController.isPredictTaken()){
+                        int offsetField = 1;
+                        if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
+                            offsetField = 2;
+                        }
+                        int offset = nextInstructName.getParams().get(offsetField);
+                        pc.writeDoubleWord((pc.getValue()) + 4 + offset);
                     }
-                    int offset = nextInstructName.getParams().get(offsetField);
-                    pc.writeDoubleWord((pc.getValue()) + 4);
+                    else {
+                        pc.writeDoubleWord((pc.getValue()) + 4);
+                    }
                 }
                 else{
                     pc.writeDoubleWord((pc.getValue()) + 4);
