@@ -21,12 +21,11 @@
 
 package edumips64.core.is;
 
-import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 import java.util.*;
 import java.util.logging.Logger;
-import java.lang.Enum.*;
+
 /**Abstract class: it provides all methods and attributes for each instruction type
  * 
  * @author Trubia Massimo, Russo Daniele
@@ -201,7 +200,7 @@ public abstract class Instruction {
      * In this method all instructions that modify GPRs lock the involved register
      *</pre>
      **/
-    public abstract void ID() throws RAWException,IrregularWriteOperationException,IrregularStringOfBitsException,TwosComplementSumException,HaltException,JumpException, BreakException, NotTakenException;
+    public abstract void ID() throws RAWException,IrregularWriteOperationException,IrregularStringOfBitsException,TwosComplementSumException,HaltException,JumpException, BreakException;
     
     /**
      * <pre>

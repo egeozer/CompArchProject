@@ -26,7 +26,6 @@
 package edumips64.core.is;
 
 import core.CountController;
-import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 
@@ -51,7 +50,7 @@ public class BEQZ extends FlowControl_IType
 	}
 	
 	public void ID()
-	throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException,NotTakenException
+	throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException
 	{
 			//getting registers rs and rt
 		 if(cpu.getRegister(params.get(RS_FIELD)).getWriteSemaphore() > 0)

@@ -25,7 +25,6 @@
 
 package edumips64.core.is;
 import core.CountController;
-import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
 /** <pre>
@@ -46,7 +45,7 @@ public class BEQ extends FlowControl_IType {
 	name="BEQ";
     }
 
-    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException,NotTakenException {
+    public void ID() throws RAWException, IrregularWriteOperationException, IrregularStringOfBitsException, JumpException,TwosComplementSumException {
         if(cpu.getRegister(params.get(RS_FIELD)).getWriteSemaphore()>0 || cpu.getRegister(params.get(RT_FIELD)).getWriteSemaphore()>0)
             throw new RAWException();
         //getting registers rs and rt
