@@ -17,8 +17,8 @@ public class PredictionCorrector {
 
         if (condition) {
 
-            if (CountController.isPredictTaken()) {
-            } else {
+            // Condition True but predict Not Taken: Add PC offset @ instruction execution
+            if (!CountController.isPredictTaken()) {
                 String pc_new = "";
                 Register pc = cpu.getPC();
                 String pc_old = cpu.getPC().getBinString();
@@ -36,7 +36,7 @@ public class PredictionCorrector {
 
 
         } else {
-            // Misprediction:
+            // Condition False but predict Taken: Remove PC offset @ instruction execution
             if (CountController.isPredictTaken()) {
                 // Change Prediction Miscount
                 CountController.incrementMispredictCount();
