@@ -31,6 +31,8 @@ import core.is.NotTakenException;
 import edumips64.core.is.*;
 import edumips64.utils.*;
 
+import static core.CountController.resetPredictTaken;
+
 /**
  * This class models a MIPS CPU with 32 64-bit General Purpose Registers.
  *
@@ -438,7 +440,10 @@ public class CPU {
         cycles = 0;
         instructions = 0;
         RAWStalls = 0;
-
+        CountController.setOffsetPC(0);
+        CountController.resetMispredictCount();
+        CountController.resetMispredictStalls();
+        CountController.resetPredictTaken();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();
