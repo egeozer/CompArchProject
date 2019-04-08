@@ -76,13 +76,10 @@ public class GUIStatistics extends GUIComponent {
 			cpi = (float)nCycles/(float)nInstructions;
 		}
 		rawStalls = cpu.getRAWStalls();
-		if(cpu.isPredictionTaken()) {
-			branchTakenStalls = cpu.getBranchPreidctionStalls();
-		}
-		else{
-			branchMispredictionStalls = cpu.getBranchPreidctionStalls();
-		}
-		codeSize = (cpu.getMemory().getInstructionsNumber())*4;
+			branchTakenStalls = cpu.getBranchTakenStalls();
+			branchMispredictionStalls = cpu.getMispredictionStalls();
+
+			codeSize = (cpu.getMemory().getInstructionsNumber())*4;
 		pTaken = CountController.isPredictTaken();
 	}
 

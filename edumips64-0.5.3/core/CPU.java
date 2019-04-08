@@ -219,11 +219,13 @@ public class CPU {
      * @return an integer
      */
     public int getRAWStalls() {
-        System.out.println(getBranchPreidctionStalls());
         return RAWStalls;
     }
-    public int getBranchPreidctionStalls() {
-        return CountController.getMispredictCount();
+    public int getBranchTakenStalls() {
+        return CountController.getTakenStalls();
+    }
+    public int getMispredictionStalls() {
+        return CountController.getMispredictionStalls();
     }
     public boolean isPredictionTaken() {
         return CountController.isPredictTaken();
