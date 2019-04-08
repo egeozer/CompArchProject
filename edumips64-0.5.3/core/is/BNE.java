@@ -24,7 +24,7 @@
  */
 
 package edumips64.core.is;
-import core.CountController;
+import core.PredictionCorrector;
 import core.is.NotTakenException;
 import edumips64.core.*;
 import edumips64.utils.*;
@@ -56,36 +56,8 @@ public class BNE extends FlowControl_IType {
         bs.writeHalf(params.get(OFFSET_FIELD));
         String offset=bs.getBinString();
         boolean condition=!rs.equals(rt);
-        if(condition)
-        {
-            String pc_new="";
-            Register pc=cpu.getPC();
-            String pc_old=cpu.getPC().getBinString();
-            
-           //subtracting 4 to the pc_old temporary variable using bitset64 safe methods
-            BitSet64 bs_temp=new BitSet64();
-            bs_temp.writeDoubleWord(-4);
-            pc_old=InstructionsUtils.twosComplementSum(pc_old,bs_temp.getBinString());
-           
-            //updating program counter
-            pc_new=InstructionsUtils.twosComplementSum(pc_old,offset);
-            pc.setBits(pc_new,0);
-            
-            throw new JumpException(); 
-        }
-        else{
-            if(CountController.isPredictTaken()){
+        PredictionCorrector.correctOffset(condition, cpu, offset, logger);
 
-                CountController.incrementMispredictCount();
-                logger.info("Increment misprediction to " + CountController.getMispredictCount());
-
-                if(CountController.isMispredictReached()){ //Error catch condition
-                    CountController.changePrediction();
-                    logger.info("Changing Prediction to " + CountController.isPredictTaken());
-                }
-
-            }
-        }
 
     }
 
