@@ -59,7 +59,7 @@ public class PredictionCorrector {
 
                 //updating program counter
                 pc_new = InstructionsUtils.twosComplementSum(pc_old, offset);
-                pc.setBits(pc_new, 0);
+                pc.setBits(pc_old, 0);
 
             }
         }
