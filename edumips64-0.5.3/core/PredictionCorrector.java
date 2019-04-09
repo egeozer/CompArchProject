@@ -31,7 +31,7 @@ public class PredictionCorrector {
                 //updating program counter
                 pc_new = InstructionsUtils.twosComplementSum(pc_old, offset);
                 pc.setBits(pc_new, 0);
-                throw new JumpException();
+                //throw new JumpException();
             }
 
 
