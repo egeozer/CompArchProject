@@ -440,6 +440,7 @@ public class CPU {
         CountController.resetMispredictCount();
         CountController.resetMispredictStalls();
         CountController.resetPredictTaken();
+        CountController.resetFlushing();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();

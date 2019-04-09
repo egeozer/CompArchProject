@@ -31,7 +31,9 @@ public class PredictionCorrector {
                 //updating program counter
                 pc_new = InstructionsUtils.twosComplementSum(pc_old, offset);
                 pc.setBits(pc_new, 0);
-                //throw new JumpException();
+
+                // Flush the mispredicted instruction
+                throw new JumpException();
             }
 
 
@@ -61,6 +63,8 @@ public class PredictionCorrector {
                 pc_new = InstructionsUtils.twosComplementSum(pc_old, offset);
                 pc.setBits(pc_old, 0);
 
+                // Flush the mispredicted instruction
+                throw new JumpException();
             }
         }
 
