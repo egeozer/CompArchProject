@@ -60,6 +60,7 @@ public class Config{
 			config.put("syncexc-masked",false);
 			config.put("syncexc-terminate",false);
 			config.put("n_step",4);
+			config.put("n_predictor",2);
 			config.put("sleep_interval",10);
                         config.put("show_aliases",false); 
 		}

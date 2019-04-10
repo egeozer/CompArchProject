@@ -27,14 +27,31 @@
 
 package edumips64.core.is;
 
-import core.CountController;
+import core.PredictionController;
+import core.PredictionController;
+import edumips64.core.CPU;
+
+import java.util.logging.Logger;
 
 /**
  * @author Trubia Massimo, Russo Daniele
  */
 public class JumpException extends Exception {
-    public JumpException(){
-        CountController.incrementTakenCount();
+
+    private static final Logger logger = Logger.getLogger(CPU.class.getName());
+
+    public JumpException() {
+        // Check what type of prediction since Taken
+        if (!PredictionController.isPredictTaken()) {
+            PredictionController.incrementMispredictCount();
+            logger.info("Increment misprediction to " + PredictionController.getMispredictCount());
+
+            if (PredictionController.isMispredictReached()) {
+                PredictionController.changePrediction();
+                logger.info("Changing Prediction to " + PredictionController.isPredictTaken());
+            }
+
+        }
     }
 }
 

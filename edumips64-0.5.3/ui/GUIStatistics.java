@@ -22,9 +22,9 @@
  */
 
 package edumips64.ui;
-import edumips64.core.*;
+import core.PredictionController;
 import edumips64.utils.*;
-import java.util.*;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -35,7 +35,8 @@ import javax.swing.*;
 public class GUIStatistics extends GUIComponent {
 
 	StatPanel statPanel;
-	private int nCycles, nInstructions, rawStalls, codeSize;
+	private int nCycles, nInstructions, rawStalls, codeSize, branchTakenStalls, branchMispredictionStalls;
+	private boolean pTaken;
 	private float cpi;
 	
 	public GUIStatistics () 
@@ -48,7 +49,7 @@ public class GUIStatistics extends GUIComponent {
 		JList statList;
 		String [] statistics = {" Execution", " 0 Cycles", " 0 Instructions", " ", " ", " ", " Stalls", " 0 RAW Stalls", " 0 WAW Stalls",
 		       		       " 0 WAR Stalls", " 0 Structural Stalls", " 0 Branch Taken Stalls", " 0 Branch Misprediction Stalls",
-				       " ", " Code Size", " 0 Bytes"};
+				       " ", " Code Size", " 0 Bytes", " ", " Prediction", " T Predict Taken"};
 		public StatPanel () 
 		{
 			super();
@@ -75,7 +76,11 @@ public class GUIStatistics extends GUIComponent {
 			cpi = (float)nCycles/(float)nInstructions;
 		}
 		rawStalls = cpu.getRAWStalls();
-		codeSize = (cpu.getMemory().getInstructionsNumber())*4;
+			branchTakenStalls = cpu.getBranchTakenStalls();
+			branchMispredictionStalls = cpu.getMispredictionStalls();
+
+			codeSize = (cpu.getMemory().getInstructionsNumber())*4;
+		pTaken = PredictionController.isPredictTaken();
 	}
 
 	public void draw ()
@@ -143,6 +148,7 @@ public class GUIStatistics extends GUIComponent {
 							label.setText(" " + rawStalls + " " + CurrentLocale.getString("RAWS"));
 						else
 							label.setText(" " + rawStalls + " " + CurrentLocale.getString("RAW"));
+
 						label.setFont(f);
 						return label;
 					case 8:
@@ -158,11 +164,11 @@ public class GUIStatistics extends GUIComponent {
 						label.setFont(f);
 						return label;
 					case 11:
-						label.setText(" 0 " + CurrentLocale.getString("BTS"));
+						label.setText(" " + branchTakenStalls + " " + CurrentLocale.getString("BTS"));
 						label.setFont(f);
 						return label;
 					case 12:
-						label.setText(" 0 " + CurrentLocale.getString("BMS"));
+						label.setText(" " + branchMispredictionStalls + " " + CurrentLocale.getString("BMS"));
 						label.setFont(f);
 						return label;
 					case 13:
@@ -175,6 +181,18 @@ public class GUIStatistics extends GUIComponent {
 						return label;
 					case 15:
 						label.setText(" " + codeSize + " " + CurrentLocale.getString("BYTES"));
+						label.setFont(f);
+						return label;
+					case 16:
+						label.setText(" ");
+						return label;
+					case 17:
+						label.setText(" " + "Prediction: "+PredictionController.getnBitPredictor()+" bit");
+						label.setForeground(Color.red);
+						label.setFont(f);
+						return label;
+					case 18:
+						label.setText(" " + pTaken + " Predict Taken");
 						label.setFont(f);
 						return label;
 				}

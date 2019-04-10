@@ -26,8 +26,12 @@ package edumips64.core;
 import java.util.*;
 import java.util.logging.Logger;
 
+import core.PredictionController;
+import core.PredictionController;
 import edumips64.core.is.*;
 import edumips64.utils.*;
+
+import static core.PredictionController.resetPredictTaken;
 
 /**
  * This class models a MIPS CPU with 32 64-bit General Purpose Registers.
@@ -219,6 +223,15 @@ public class CPU {
     public int getRAWStalls() {
         return RAWStalls;
     }
+    public int getBranchTakenStalls() {
+        return PredictionController.getTakenStalls();
+    }
+    public int getMispredictionStalls() {
+        return PredictionController.getMispredictionStalls();
+    }
+    public boolean isPredictionTaken() {
+        return PredictionController.isPredictTaken();
+    }
 
     /**
      * This method performs a single pipeline step
@@ -308,7 +321,31 @@ public class CPU {
                 pipe.put(PipeStatus.ID, pipe.get(PipeStatus.IF));
                 pipe.put(PipeStatus.IF, mem.getInstruction(pc));
                 old_pc.writeDoubleWord((pc.getValue()));
-                pc.writeDoubleWord((pc.getValue()) + 4);
+
+                /* ----------------- Logic to load Taken/Not Taken instructions -------------- */
+
+                // Get next instruction name to determine if it is a branch IS
+                Instruction nextInstructName = pipe.get(PipeStatus.IF);
+                String instructionName = nextInstructName.getName();
+
+                // Load branched instruction if predict taken
+                if((instructionName.equals("BEQ") || instructionName.equals("BEQZ") || instructionName.equals("BGEZ")
+                        || instructionName.equals("BNE") || instructionName.equals("BNEZ"))
+                        && PredictionController.isPredictTaken()){
+
+                    int offsetField = 1;
+                    if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
+                        offsetField = 2;
+                    }
+
+                    PredictionController.setOffsetPC(nextInstructName.getParams().get(offsetField));
+                    pc.writeDoubleWord((pc.getValue()) + 4 + PredictionController.getOffsetPC());
+                }
+                else{
+                    pc.writeDoubleWord((pc.getValue()) + 4);
+                }
+
+
             } else {
                 pipe.put(PipeStatus.ID, Instruction.buildInstruction("BUBBLE"));
             }
@@ -401,7 +438,11 @@ public class CPU {
         cycles = 0;
         instructions = 0;
         RAWStalls = 0;
-
+        PredictionController.setOffsetPC(0);
+        PredictionController.resetMispredictCount();
+        PredictionController.resetMispredictStalls();
+        PredictionController.resetPredictTaken();
+        PredictionController.updateNBitPredictor();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();
