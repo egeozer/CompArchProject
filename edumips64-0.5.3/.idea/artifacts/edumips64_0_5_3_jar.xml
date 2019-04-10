@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="edumips64-0.5.3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/edumips64_0_5_3_jar</output-path>
+    <root id="archive" name="edumips64-0.5.3.jar">
+      <element id="module-output" name="edumips64-0.5.3" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/edumips64-svn.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

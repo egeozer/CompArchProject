@@ -38,6 +38,12 @@ public class Config{
 		try{
 	
 			openConfigFile();
+
+			// Check if "n_predictor" label has been created or not in config file
+			if(config.get("n_predictor") == null){
+				config.put("n_predictor",2);
+			}
+
 	
 		}catch(ConfigFileNotFoundException e) {
 			config.put("version",Main.VERSION);

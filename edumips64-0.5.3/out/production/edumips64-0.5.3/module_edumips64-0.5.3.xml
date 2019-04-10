@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_edumips64-0.5.3" default="compile.module.edumips64-0.5.3">
+  <dirname property="module.edumips64-0.5.3.basedir" file="${ant.file.module_edumips64-0.5.3}"/>
+  
+  <property name="module.jdk.home.edumips64-0.5.3" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.edumips64-0.5.3" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.edumips64-0.5.3" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.edumips64-0.5.3" value="-encoding ISO-8859-1 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="edumips64-0.5.3.output.dir" value="${module.edumips64-0.5.3.basedir}/out/production/edumips64-0.5.3"/>
+  <property name="edumips64-0.5.3.testoutput.dir" value="${module.edumips64-0.5.3.basedir}/out/test/edumips64-0.5.3"/>
+  
+  <path id="edumips64-0.5.3.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="edumips64-0.5.3.module.production.classpath">
+    <path refid="${module.jdk.classpath.edumips64-0.5.3}"/>
+    <path refid="library.edumips64-svn.classpath"/>
+  </path>
+  
+  <path id="edumips64-0.5.3.runtime.production.module.classpath">
+    <pathelement location="${edumips64-0.5.3.output.dir}"/>
+    <path refid="library.edumips64-svn.classpath"/>
+  </path>
+  
+  <path id="edumips64-0.5.3.module.classpath">
+    <path refid="${module.jdk.classpath.edumips64-0.5.3}"/>
+    <pathelement location="${edumips64-0.5.3.output.dir}"/>
+    <path refid="library.edumips64-svn.classpath"/>
+  </path>
+  
+  <path id="edumips64-0.5.3.runtime.module.classpath">
+    <pathelement location="${edumips64-0.5.3.testoutput.dir}"/>
+    <pathelement location="${edumips64-0.5.3.output.dir}"/>
+    <path refid="library.edumips64-svn.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.edumips64-0.5.3">
+    <patternset refid="ignored.files"/>
+    <exclude name="out/**"/>
+    <exclude name="out/production/**"/>
+    <exclude name="out/production/edumips64-0.5.3/**"/>
+    <exclude name="out/production/edumips64-0.5.3/img/**"/>
+    <exclude name="out/production/edumips64-0.5.3/core/**"/>
+    <exclude name="out/production/edumips64-0.5.3/data/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/src/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/html/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/html/_static/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/html/_sources/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/latex/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/output/doctrees/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/javahelp/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/en/javahelp/JavaHelpSearch/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/src/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/html/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/html/_static/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/html/_sources/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/latex/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/output/doctrees/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/javahelp/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/it/javahelp/JavaHelpSearch/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/img/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/tex/**"/>
+    <exclude name="out/production/edumips64-0.5.3/docs/tex/listings/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/plaf/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/plaf/gtk/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/plaf/gtk/images/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/plaf/basic/**"/>
+    <exclude name="out/production/edumips64-0.5.3/libs/javax/help/plaf/basic/images/**"/>
+    <exclude name="out/production/edumips64-0.5.3/test/**"/>
+    <exclude name="out/production/edumips64-0.5.3/test/is/**"/>
+    <exclude name="out/production/edumips64-0.5.3/test/utils/**"/>
+    <exclude name="out/production/edumips64-0.5.3/test/old_tests/**"/>
+    <exclude name="out/production/edumips64-0.5.3/.idea/**"/>
+    <exclude name="out/production/edumips64-0.5.3/.idea/libraries/**"/>
+    <exclude name="out/production/edumips64-0.5.3/utils/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/ui/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/img/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/core/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/core/is/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/core/fpu/**"/>
+    <exclude name="out/production/edumips64-0.5.3/edumips64/utils/**"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.edumips64-0.5.3">
+    <patternset refid="excluded.from.module.edumips64-0.5.3"/>
+  </patternset>
+  
+  <path id="edumips64-0.5.3.module.sourcepath">
+    <dirset dir="${module.edumips64-0.5.3.basedir}/../../CompArchProject">
+      <include name="edumips64-0.5.3"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.edumips64-0.5.3" depends="compile.module.edumips64-0.5.3.production,compile.module.edumips64-0.5.3.tests" description="Compile module edumips64-0.5.3"/>
+  
+  <target name="compile.module.edumips64-0.5.3.production" depends="register.custom.compilers" description="Compile module edumips64-0.5.3; production classes">
+    <mkdir dir="${edumips64-0.5.3.output.dir}"/>
+    <javac2 destdir="${edumips64-0.5.3.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.edumips64-0.5.3}/javac">
+      <compilerarg line="${compiler.args.edumips64-0.5.3}"/>
+      <bootclasspath refid="edumips64-0.5.3.module.bootclasspath"/>
+      <classpath refid="edumips64-0.5.3.module.production.classpath"/>
+      <src refid="edumips64-0.5.3.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.edumips64-0.5.3"/>
+    </javac2>
+    
+    <copy todir="${edumips64-0.5.3.output.dir}">
+      <fileset dir="${module.edumips64-0.5.3.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.edumips64-0.5.3.tests" depends="register.custom.compilers,compile.module.edumips64-0.5.3.production" description="compile module edumips64-0.5.3; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.edumips64-0.5.3" description="cleanup module">
+    <delete dir="${edumips64-0.5.3.output.dir}"/>
+    <delete dir="${edumips64-0.5.3.testoutput.dir}"/>
+  </target>
+</project>

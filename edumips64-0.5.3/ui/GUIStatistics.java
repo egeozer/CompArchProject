@@ -187,7 +187,7 @@ public class GUIStatistics extends GUIComponent {
 						label.setText(" ");
 						return label;
 					case 17:
-						label.setText(" " + "Prediction: "+PredictionController.getnBitPredictor()+" bit");
+						label.setText(" " + "Prediction: " + PredictionController.getnBitPredictor() + " bit");
 						label.setForeground(Color.red);
 						label.setFont(f);
 						return label;
