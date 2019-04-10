@@ -186,7 +186,8 @@ public class GUIConfig extends JDialog {
             });
         } else if (comp instanceof JNumberField) {
             final JNumberField number = (JNumberField) comp;
-            number.setNumber((Integer) Config.get(key));
+            Integer number1 = (Integer) Config.get(key);
+            number.setNumber(number1);
 
             number.addFocusListener(new FocusAdapter() {
                 public void focusLost(FocusEvent e) {
