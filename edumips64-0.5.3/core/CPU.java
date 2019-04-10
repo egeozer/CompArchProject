@@ -26,11 +26,12 @@ package edumips64.core;
 import java.util.*;
 import java.util.logging.Logger;
 
-import core.CountController;
+import core.PredictionController;
+import core.PredictionController;
 import edumips64.core.is.*;
 import edumips64.utils.*;
 
-import static core.CountController.resetPredictTaken;
+import static core.PredictionController.resetPredictTaken;
 
 /**
  * This class models a MIPS CPU with 32 64-bit General Purpose Registers.
@@ -223,13 +224,13 @@ public class CPU {
         return RAWStalls;
     }
     public int getBranchTakenStalls() {
-        return CountController.getTakenStalls();
+        return PredictionController.getTakenStalls();
     }
     public int getMispredictionStalls() {
-        return CountController.getMispredictionStalls();
+        return PredictionController.getMispredictionStalls();
     }
     public boolean isPredictionTaken() {
-        return CountController.isPredictTaken();
+        return PredictionController.isPredictTaken();
     }
 
     /**
@@ -321,23 +322,24 @@ public class CPU {
                 pipe.put(PipeStatus.IF, mem.getInstruction(pc));
                 old_pc.writeDoubleWord((pc.getValue()));
 
+                /* ----------------- Logic to load Taken/Not Taken instructions -------------- */
+
+                // Get next instruction name to determine if it is a branch IS
                 Instruction nextInstructName = pipe.get(PipeStatus.IF);
                 String instructionName = nextInstructName.getName();
 
                 // Load branched instruction if predict taken
-                if(instructionName.equals("BEQ") || instructionName.equals("BEQZ") || instructionName.equals("BGEZ") || instructionName.equals("BNE")
-                        || instructionName.equals("BNEZ")){
-                    if(CountController.isPredictTaken()){
-                        int offsetField = 1;
-                        if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
-                            offsetField = 2;
-                        }
-                        CountController.setOffsetPC(nextInstructName.getParams().get(offsetField));
-                        pc.writeDoubleWord((pc.getValue()) + 4 + CountController.getOffsetPC());
+                if((instructionName.equals("BEQ") || instructionName.equals("BEQZ") || instructionName.equals("BGEZ")
+                        || instructionName.equals("BNE") || instructionName.equals("BNEZ"))
+                        && PredictionController.isPredictTaken()){
+
+                    int offsetField = 1;
+                    if (instructionName.equals("BEQ") || instructionName.equals("BNE")) {
+                        offsetField = 2;
                     }
-                    else {
-                        pc.writeDoubleWord((pc.getValue()) + 4);
-                    }
+
+                    PredictionController.setOffsetPC(nextInstructName.getParams().get(offsetField));
+                    pc.writeDoubleWord((pc.getValue()) + 4 + PredictionController.getOffsetPC());
                 }
                 else{
                     pc.writeDoubleWord((pc.getValue()) + 4);
@@ -436,11 +438,10 @@ public class CPU {
         cycles = 0;
         instructions = 0;
         RAWStalls = 0;
-        CountController.setOffsetPC(0);
-        CountController.resetMispredictCount();
-        CountController.resetMispredictStalls();
-        CountController.resetPredictTaken();
-        CountController.resetFlushing();
+        PredictionController.setOffsetPC(0);
+        PredictionController.resetMispredictCount();
+        PredictionController.resetMispredictStalls();
+        PredictionController.resetPredictTaken();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();

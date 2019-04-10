@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2766abab-3ea5-4938-84e4-962fac6372fc" name="Default Changelist" comment="">
+    <list default="true" id="2766abab-3ea5-4938-84e4-962fac6372fc" name="Default Changelist" comment="Fixed Misprediction Taken where instruct would not flush">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/CPU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/PredictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/PredictionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/PredictionCorrector.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/PredictionCorrector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/is/JumpException.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/is/JumpException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/core/CountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/core/PredictionCorrector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/core/PredictionCorrector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$CPUStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$CPUStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$PipeStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$PipeStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$R0.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU$R0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/JumpException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/JumpException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/ui/GUIStatistics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/GUIStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/ui/GUIStatistics.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,77 +33,72 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/CPU.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="364" selection-start-line="364" selection-end-line="364" />
+            <state relative-caret-position="270">
+              <caret line="327" column="71" lean-forward="true" selection-start-line="327" selection-start-column="71" selection-end-line="327" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4364#4365#0" expanded="true" />
-                <element signature="e#4400#4401#0" expanded="true" />
-                <element signature="e#4562#4563#0" expanded="true" />
-                <element signature="e#4591#4592#0" expanded="true" />
-                <element signature="e#4984#4985#0" expanded="true" />
-                <element signature="e#5010#5011#0" expanded="true" />
-                <element signature="e#5043#5044#0" expanded="true" />
-                <element signature="e#5069#5070#0" expanded="true" />
-                <element signature="e#5112#5113#0" expanded="true" />
-                <element signature="e#5143#5144#0" expanded="true" />
-                <element signature="e#5301#5302#0" expanded="true" />
-                <element signature="e#5334#5335#0" expanded="true" />
-                <element signature="e#5391#5392#0" expanded="true" />
-                <element signature="e#5418#5419#0" expanded="true" />
-                <element signature="e#5555#5556#0" expanded="true" />
-                <element signature="e#5584#5585#0" expanded="true" />
-                <element signature="e#5731#5732#0" expanded="true" />
-                <element signature="e#5766#5767#0" expanded="true" />
-                <element signature="e#5922#5923#0" expanded="true" />
-                <element signature="e#5954#5955#0" expanded="true" />
-                <element signature="e#5994#5995#0" expanded="true" />
-                <element signature="e#6049#6050#0" expanded="true" />
-                <element signature="e#6091#6092#0" expanded="true" />
-                <element signature="e#6154#6155#0" expanded="true" />
-                <element signature="e#6195#6196#0" expanded="true" />
-                <element signature="e#6250#6251#0" expanded="true" />
-                <element signature="e#13476#13477#0" expanded="true" />
-                <element signature="e#13501#13502#0" expanded="true" />
-                <element signature="e#13638#13639#0" expanded="true" />
-                <element signature="e#13667#13668#0" expanded="true" />
-                <element signature="e#13834#13835#0" expanded="true" />
-                <element signature="e#13859#13860#0" expanded="true" />
-                <element signature="e#14026#14027#0" expanded="true" />
-                <element signature="e#14051#14052#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/CountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-              <folding>
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#4374#4375#0" expanded="true" />
+                <element signature="e#4410#4411#0" expanded="true" />
+                <element signature="e#4572#4573#0" expanded="true" />
+                <element signature="e#4601#4602#0" expanded="true" />
+                <element signature="e#4994#4995#0" expanded="true" />
+                <element signature="e#5020#5021#0" expanded="true" />
+                <element signature="e#5053#5054#0" expanded="true" />
+                <element signature="e#5079#5080#0" expanded="true" />
+                <element signature="e#5122#5123#0" expanded="true" />
+                <element signature="e#5153#5154#0" expanded="true" />
+                <element signature="e#5311#5312#0" expanded="true" />
+                <element signature="e#5344#5345#0" expanded="true" />
+                <element signature="e#5401#5402#0" expanded="true" />
+                <element signature="e#5428#5429#0" expanded="true" />
+                <element signature="e#5565#5566#0" expanded="true" />
+                <element signature="e#5594#5595#0" expanded="true" />
+                <element signature="e#5741#5742#0" expanded="true" />
+                <element signature="e#5776#5777#0" expanded="true" />
+                <element signature="e#5932#5933#0" expanded="true" />
+                <element signature="e#5964#5965#0" expanded="true" />
+                <element signature="e#6004#6005#0" expanded="true" />
+                <element signature="e#6064#6065#0" expanded="true" />
+                <element signature="e#6106#6107#0" expanded="true" />
+                <element signature="e#6174#6175#0" expanded="true" />
+                <element signature="e#6215#6216#0" expanded="true" />
+                <element signature="e#6275#6276#0" expanded="true" />
+                <element signature="e#13439#13440#0" expanded="true" />
+                <element signature="e#13605#13606#0" expanded="true" />
+                <element signature="e#13797#13798#0" expanded="true" />
+                <element signature="e#13989#13990#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/is/Instruction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="179" column="110" lean-forward="true" selection-start-line="179" selection-start-column="110" selection-end-line="179" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/PredictionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <folding>
+                <element signature="method#incrementMispredictCount#0;class#CountController#0" />
+                <element signature="method#changePrediction#0;class#CountController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/PredictionCorrector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="663">
+              <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -98,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/is/JumpException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state relative-caret-position="425">
+              <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,37 +116,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BEQZ.java">
+        <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BEQ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BNE.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/is/BNEZ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="190">
+              <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +149,15 @@
       <find>NotTakenException</find>
       <find>notTake</find>
       <find>reset</find>
+      <find>n_step</find>
+      <find>warnings</find>
+      <find>pipe.put</find>
+      <find>paras</find>
+      <find>CountController</find>
     </findStrings>
+    <replaceStrings>
+      <replace>PredictionController</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -178,14 +170,15 @@
         <option value="$PROJECT_DIR$/core/is/BGEZ.java" />
         <option value="$PROJECT_DIR$/core/is/BNE.java" />
         <option value="$PROJECT_DIR$/core/is/NotTakenException.java" />
-        <option value="$PROJECT_DIR$/core/is/JumpException.java" />
         <option value="$PROJECT_DIR$/utils/MessagesBundle_en.properties" />
-        <option value="$PROJECT_DIR$/ui/GUIStatistics.java" />
         <option value="$PROJECT_DIR$/core/is/BEQ.java" />
         <option value="$PROJECT_DIR$/core/is/BNEZ.java" />
         <option value="$PROJECT_DIR$/core/CountController.java" />
-        <option value="$PROJECT_DIR$/core/CPU.java" />
+        <option value="$PROJECT_DIR$/core/PredictionController.java" />
+        <option value="$PROJECT_DIR$/ui/GUIStatistics.java" />
+        <option value="$PROJECT_DIR$/core/is/JumpException.java" />
         <option value="$PROJECT_DIR$/core/PredictionCorrector.java" />
+        <option value="$PROJECT_DIR$/core/CPU.java" />
       </list>
     </option>
   </component>
@@ -223,7 +216,7 @@
             <path>
               <item name="edumips64-0.5.3" type="b2602c69:ProjectViewProjectNode" />
               <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,7 +283,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32547000" />
+    <option name="totallyTimeSpent" value="34145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,7 +307,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18526544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18526544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35536295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -359,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/is/Prediction.java" />
     <entry file="jar://$PROJECT_DIR$/edumips64-svn.jar!/edumips64/core/SynchronousException.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -400,13 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/BGEZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/JNumberField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -430,32 +409,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="187" column="37" lean-forward="true" selection-start-line="187" selection-start-column="37" selection-end-line="187" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/MessagesBundle_en.properties">
       <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/CPUGUIThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="65" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -473,16 +431,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/NotTakenException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/NotTakenException.java" />
     <entry file="file://$PROJECT_DIR$/core/is/J.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-58">
@@ -497,47 +446,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/CountController.java">
+    <entry file="file://$PROJECT_DIR$/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-          <folding>
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="226">
+          <caret line="731" column="33" lean-forward="true" selection-start-line="731" selection-start-column="33" selection-end-line="731" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/JumpException.java">
+    <entry file="file://$PROJECT_DIR$/ui/GUIConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="697">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5460#5597#0" expanded="true" />
+            <element signature="e#5596#5597#0" expanded="true" />
+            <element signature="e#5771#6078#0" expanded="true" />
+            <element signature="e#6077#6078#0" expanded="true" />
+            <element signature="e#6101#6417#0" expanded="true" />
+            <element signature="e#6416#6417#0" expanded="true" />
+            <element signature="e#6579#6727#0" expanded="true" />
+            <element signature="e#6726#6727#0" expanded="true" />
+            <element signature="e#6748#6908#0" expanded="true" />
+            <element signature="e#6907#6908#0" expanded="true" />
+            <element signature="e#8507#8508#0" expanded="true" />
+            <element signature="e#8535#8536#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/is/BEQZ.java">
+    <entry file="file://$PROJECT_DIR$/utils/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="357">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/CPUGUIThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/JR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/HALT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/is/BEQ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="629">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
@@ -545,65 +513,113 @@
     <entry file="file://$PROJECT_DIR$/core/is/BNE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/BGEZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/BEQZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/is/BNEZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="391">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/CPU.java">
+    <entry file="file://$PROJECT_DIR$/ui/GUIStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="364" selection-start-line="364" selection-end-line="364" />
+        <state relative-caret-position="190">
+          <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4364#4365#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4562#4563#0" expanded="true" />
-            <element signature="e#4591#4592#0" expanded="true" />
-            <element signature="e#4984#4985#0" expanded="true" />
-            <element signature="e#5010#5011#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5112#5113#0" expanded="true" />
-            <element signature="e#5143#5144#0" expanded="true" />
-            <element signature="e#5301#5302#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5391#5392#0" expanded="true" />
-            <element signature="e#5418#5419#0" expanded="true" />
-            <element signature="e#5555#5556#0" expanded="true" />
-            <element signature="e#5584#5585#0" expanded="true" />
-            <element signature="e#5731#5732#0" expanded="true" />
-            <element signature="e#5766#5767#0" expanded="true" />
-            <element signature="e#5922#5923#0" expanded="true" />
-            <element signature="e#5954#5955#0" expanded="true" />
-            <element signature="e#5994#5995#0" expanded="true" />
-            <element signature="e#6049#6050#0" expanded="true" />
-            <element signature="e#6091#6092#0" expanded="true" />
-            <element signature="e#6154#6155#0" expanded="true" />
-            <element signature="e#6195#6196#0" expanded="true" />
-            <element signature="e#6250#6251#0" expanded="true" />
-            <element signature="e#13476#13477#0" expanded="true" />
-            <element signature="e#13501#13502#0" expanded="true" />
-            <element signature="e#13638#13639#0" expanded="true" />
-            <element signature="e#13667#13668#0" expanded="true" />
-            <element signature="e#13834#13835#0" expanded="true" />
-            <element signature="e#13859#13860#0" expanded="true" />
-            <element signature="e#14026#14027#0" expanded="true" />
-            <element signature="e#14051#14052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/JumpException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/PredictionCorrector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="663">
+          <caret line="54" column="92" lean-forward="true" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/PredictionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding>
+            <element signature="method#incrementMispredictCount#0;class#CountController#0" />
+            <element signature="method#changePrediction#0;class#CountController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CPU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="327" column="71" lean-forward="true" selection-start-line="327" selection-start-column="71" selection-end-line="327" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4410#4411#0" expanded="true" />
+            <element signature="e#4572#4573#0" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4994#4995#0" expanded="true" />
+            <element signature="e#5020#5021#0" expanded="true" />
+            <element signature="e#5053#5054#0" expanded="true" />
+            <element signature="e#5079#5080#0" expanded="true" />
+            <element signature="e#5122#5123#0" expanded="true" />
+            <element signature="e#5153#5154#0" expanded="true" />
+            <element signature="e#5311#5312#0" expanded="true" />
+            <element signature="e#5344#5345#0" expanded="true" />
+            <element signature="e#5401#5402#0" expanded="true" />
+            <element signature="e#5428#5429#0" expanded="true" />
+            <element signature="e#5565#5566#0" expanded="true" />
+            <element signature="e#5594#5595#0" expanded="true" />
+            <element signature="e#5741#5742#0" expanded="true" />
+            <element signature="e#5776#5777#0" expanded="true" />
+            <element signature="e#5932#5933#0" expanded="true" />
+            <element signature="e#5964#5965#0" expanded="true" />
+            <element signature="e#6004#6005#0" expanded="true" />
+            <element signature="e#6064#6065#0" expanded="true" />
+            <element signature="e#6106#6107#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6215#6216#0" expanded="true" />
+            <element signature="e#6275#6276#0" expanded="true" />
+            <element signature="e#13439#13440#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13797#13798#0" expanded="true" />
+            <element signature="e#13989#13990#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/is/Instruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="179" column="110" lean-forward="true" selection-start-line="179" selection-start-column="110" selection-end-line="179" selection-end-column="110" />
         </state>
       </provider>
     </entry>

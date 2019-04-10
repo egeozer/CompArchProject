@@ -22,7 +22,7 @@
  */
 
 package edumips64.ui;
-import core.CountController;
+import core.PredictionController;
 import edumips64.utils.*;
 
 import java.awt.*;
@@ -80,7 +80,7 @@ public class GUIStatistics extends GUIComponent {
 			branchMispredictionStalls = cpu.getMispredictionStalls();
 
 			codeSize = (cpu.getMemory().getInstructionsNumber())*4;
-		pTaken = CountController.isPredictTaken();
+		pTaken = PredictionController.isPredictTaken();
 	}
 
 	public void draw ()
