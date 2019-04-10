@@ -165,6 +165,13 @@ public class GUIConfig extends JDialog {
     public void addRow(JPanel panel, final int row, final String key, final JComponent comp) {
         String title = CurrentLocale.getString("Config." + key.toUpperCase());
         String tip = CurrentLocale.getString("Config." + key.toUpperCase() + ".tip");
+
+        // Adding custom labels, cuz can't find the goddam key for unknown reasons...
+        if(key.equals("n_predictor")){
+            title = "N-bit predictor";
+            tip = "N-bit predictor";
+        }
+
         //Setting title
         JLabel label = new JLabel(title);
         label.setHorizontalAlignment(JLabel.RIGHT);

@@ -58,6 +58,11 @@ public class CurrentLocale{
 			String[] l = line.split("=",2);	
 			map.put(l[0].trim(),l[1].trim());
 		}
+
+		// Add custom labels
+		map.put("N_PREDICTOR", "N-bit predictor");
+		map.put("N_PREDICTOR.tip", "N-bit predictor");
+
 		br.close();
 		isr.close();
 		//System.out.println(map);
