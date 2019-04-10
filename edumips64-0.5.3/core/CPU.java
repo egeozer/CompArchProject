@@ -442,6 +442,7 @@ public class CPU {
         PredictionController.resetMispredictCount();
         PredictionController.resetMispredictStalls();
         PredictionController.resetPredictTaken();
+        PredictionController.updateNBitPredictor();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();

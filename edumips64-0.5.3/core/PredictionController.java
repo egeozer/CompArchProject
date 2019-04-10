@@ -1,7 +1,10 @@
 package core;
 
+import edumips64.utils.Config;
+
 public class PredictionController {
-    private static int nBitPredictor = 1; //default is 2, set to n-bit >0
+    private static int nBitPredictor = (Integer)Config.get("n_predictor"); //default is 2, set to n-bit >0
+
     private final static boolean DEFAULT_PREDICT_TAKEN = false;
     private static boolean predictTaken = false;
     private static int mispredictCount = 0;
@@ -60,5 +63,12 @@ public class PredictionController {
 
     public static int getOffsetPC() {
         return offsetPC;
+    }
+    /* -------------- nBit prediction ------------------ */
+    public static int getnBitPredictor() {
+        return nBitPredictor;
+    }
+    public static void updateNBitPredictor() {
+        nBitPredictor = (Integer) Config.get("n_predictor");
     }
 }
