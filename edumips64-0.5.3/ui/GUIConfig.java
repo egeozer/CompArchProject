@@ -96,6 +96,7 @@ public class GUIConfig extends JDialog{
 		
 		addRow(panel,row++, "forwarding",new JCheckBox());
 		addRow(panel,row++, "n_step",new JNumberField());
+		addRow(panel,row++, "n_predictor",new JNumberField());
 
 		// fill remaining vertical space
 		grid_add(panel,new JPanel(),gbl,gbc,0,1,0,row,GridBagConstraints.REMAINDER,1);
