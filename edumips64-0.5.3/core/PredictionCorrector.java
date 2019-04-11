@@ -18,6 +18,17 @@ public class PredictionCorrector {
         if (condition) {
             // Condition True but predict Not Taken: Add PC offset @ instruction execution
             if (!PredictionController.isPredictTaken()) {
+
+                // Change Prediction Miscount
+                PredictionController.incrementMispredictCount();
+                logger.info("Increment misprediction to " + PredictionController.getMispredictCount());
+
+                // Change Prediction if Miscount reached
+                if (PredictionController.isMispredictReached()) {
+                    PredictionController.changePrediction();
+                    logger.info("Changing Prediction to " + PredictionController.isPredictTaken());
+                }
+
                 String pc_new = "";
                 Register pc = cpu.getPC();
                 String pc_old = cpu.getPC().getBinString();

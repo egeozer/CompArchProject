@@ -38,20 +38,7 @@ import java.util.logging.Logger;
  */
 public class JumpException extends Exception {
 
-    private static final Logger logger = Logger.getLogger(CPU.class.getName());
-
     public JumpException() {
-        // Check what type of prediction since Taken
-        if (!PredictionController.isPredictTaken()) {
-            PredictionController.incrementMispredictCount();
-            logger.info("Increment misprediction to " + PredictionController.getMispredictCount());
-
-            if (PredictionController.isMispredictReached()) {
-                PredictionController.changePrediction();
-                logger.info("Changing Prediction to " + PredictionController.isPredictTaken());
-            }
-
-        }
     }
 }
 

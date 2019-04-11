@@ -167,7 +167,7 @@ public class GUIConfig extends JDialog {
         String tip = CurrentLocale.getString("Config." + key.toUpperCase() + ".tip");
 
         // Adding custom labels, cuz can't find the goddam key for unknown reasons...
-        if(key.equals("n_predictor")){
+        if(key.equals("n_predictor") && (title == null) && (tip == null)){
             title = "N-bit predictor";
             tip = "N-bit predictor";
         }

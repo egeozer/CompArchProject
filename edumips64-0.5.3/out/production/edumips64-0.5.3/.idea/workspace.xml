@@ -2,92 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2766abab-3ea5-4938-84e4-962fac6372fc" name="Default Changelist" comment="Fixed Misprediction Taken where instruct would not flush">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/CPU.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BGEZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BGEZ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNEZ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/BNEZ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/FlowControlInstructions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/FlowControlInstructions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$32.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$33.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$34.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$35.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$36.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$37.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$38.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$39.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$40.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$41.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$42.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$43.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$44.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$45.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$46.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$47.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$48.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$49.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$50.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$51.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$52.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$53.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$54.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$55.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$56.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$56.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$57.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$57.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$58.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$58.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$59.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$59.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$60.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$61.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$62.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$62.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$63.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$63.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$64.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$64.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$65.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$65.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$66.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$66.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$67.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$67.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$68.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$68.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$69.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$69.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$70.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$70.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$71.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$71.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$72.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$72.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$73.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$73.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$74.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$74.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$75.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$75.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction$InstructionEnumerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/Instruction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/JumpException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edumips64-0.5.3/edumips64/core/is/JumpException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/CurrentLocale.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/CurrentLocale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/GUIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ui/GUIConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,16 +19,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/CPU.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="2269">
               <caret line="481" selection-start-line="481" selection-end-line="481" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/PredictionCorrector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="484">
               <caret line="54" column="92" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
             </state>
           </provider>
@@ -122,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/PredictionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-163">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
@@ -131,17 +46,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/GUIConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="166" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="289">
+              <caret line="169" column="66" selection-start-line="169" selection-start-column="66" selection-end-line="169" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/CurrentLocale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="867">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -149,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="182">
               <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="e#2670#2671#0" expanded="true" />
@@ -159,22 +74,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/JNumberField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#1085#1086#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="3521">
               <caret line="641" column="78" selection-start-line="641" selection-start-column="71" selection-end-line="641" selection-end-column="78" />
             </state>
           </provider>
@@ -244,14 +146,15 @@
         <option value="$PROJECT_DIR$/core/PredictionCorrector.java" />
         <option value="$PROJECT_DIR$/core/CPU.java" />
         <option value="$PROJECT_DIR$/utils/CurrentLocale.java" />
+        <option value="$PROJECT_DIR$/ui/GUIConfig.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="400" />
-    <option name="y" value="-27" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="y" value="-28" />
+    <option name="width" value="975" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -266,24 +169,6 @@
           <expand>
             <path>
               <item name="edumips64-0.5.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edumips64-0.5.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edumips64-0.5.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edumips64-0.5.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="edumips64-0.5.3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -350,7 +235,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34624000" />
+    <option name="totallyTimeSpent" value="37261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,7 +248,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15511727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -407,6 +291,12 @@
           <line>42</line>
           <properties />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ui/GUIConfig.java</url>
+          <line>165</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -453,17 +343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/JNumberField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -517,13 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/GUIConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
         </state>
       </provider>
     </entry>
@@ -600,27 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/PredictionCorrector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="54" column="92" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/PredictionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/CPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="481" selection-start-line="481" selection-end-line="481" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/is/Instruction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -628,27 +479,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="e#2670#2671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/edumips64-svn.jar!/edumips64/utils/CurrentLocale.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="641" column="78" selection-start-line="641" selection-start-column="71" selection-end-line="641" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -660,10 +494,66 @@
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ui/JNumberField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CPU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2269">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/GUIConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="169" column="66" selection-start-line="169" selection-start-column="66" selection-end-line="169" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/CurrentLocale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        <state relative-caret-position="867">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#2670#2671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3521">
+          <caret line="641" column="78" selection-start-line="641" selection-start-column="71" selection-end-line="641" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/PredictionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-163">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/PredictionCorrector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="54" column="92" selection-start-line="54" selection-start-column="92" selection-end-line="54" selection-end-column="92" />
         </state>
       </provider>
     </entry>
