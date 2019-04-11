@@ -35,7 +35,7 @@ import javax.swing.*;
 public class GUIStatistics extends GUIComponent {
 
 	StatPanel statPanel;
-	private int nCycles, nInstructions, rawStalls, codeSize, branchTakenStalls, branchMispredictionStalls;
+	private int nCycles, nInstructions, rawStalls, codeSize, branchTakenStalls, branchMispredictionStalls, branchExecuted;
 	private boolean pTaken;
 	private float cpi;
 	
@@ -49,7 +49,7 @@ public class GUIStatistics extends GUIComponent {
 		JList statList;
 		String [] statistics = {" Execution", " 0 Cycles", " 0 Instructions", " ", " ", " ", " Stalls", " 0 RAW Stalls", " 0 WAW Stalls",
 		       		       " 0 WAR Stalls", " 0 Structural Stalls", " 0 Branch Taken Stalls", " 0 Branch Misprediction Stalls",
-				       " ", " Code Size", " 0 Bytes", " ", " Prediction", " T Predict Taken"};
+				       " ", " Code Size", " 0 Bytes", " ", " Prediction", " T Predict Taken", " 0 Conditional Branch Instructions Executed"};
 		public StatPanel () 
 		{
 			super();
@@ -81,6 +81,7 @@ public class GUIStatistics extends GUIComponent {
 
 			codeSize = (cpu.getMemory().getInstructionsNumber())*4;
 		pTaken = PredictionController.isPredictTaken();
+		branchExecuted = PredictionController.getBranchCount();
 	}
 
 	public void draw ()
@@ -193,6 +194,10 @@ public class GUIStatistics extends GUIComponent {
 						return label;
 					case 18:
 						label.setText(" " + pTaken + " Predict Taken");
+						label.setFont(f);
+						return label;
+					case 19:
+						label.setText(" " + branchExecuted + " Conditional Branch Instructions Executed");
 						label.setFont(f);
 						return label;
 				}

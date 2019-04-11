@@ -15,6 +15,9 @@ public class PredictionCorrector {
 
     public static void correctOffset(boolean condition, CPU cpu, String offset, Logger logger) throws JumpException, IrregularWriteOperationException, TwosComplementSumException, IrregularStringOfBitsException {
 
+        // Count number of conditional branch instructions
+        PredictionController.incrementBranchCount();
+
         if (condition) {
             // Condition True but predict Not Taken: Add PC offset @ instruction execution
             if (!PredictionController.isPredictTaken()) {

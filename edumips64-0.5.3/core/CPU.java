@@ -443,6 +443,7 @@ public class CPU {
         PredictionController.resetMispredictStalls();
         PredictionController.resetPredictTaken();
         PredictionController.updateNBitPredictor();
+        PredictionController.resetBranchCount();
         // Reset dei registri
         for (int i = 0; i < 32; i++)
             gpr[i].reset();

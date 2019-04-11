@@ -11,6 +11,7 @@ public class PredictionController {
     private static int offsetPC = 0;
     private static int mispredictStalls = 0;
     private static int takenStalls = 0;
+    private static int branchCount = 0;
 
     /* -------------- Prediction Handling ------------------ */
     public static void incrementMispredictCount() {
@@ -64,11 +65,25 @@ public class PredictionController {
     public static int getOffsetPC() {
         return offsetPC;
     }
+
     /* -------------- nBit prediction ------------------ */
     public static int getnBitPredictor() {
         return nBitPredictor;
     }
     public static void updateNBitPredictor() {
         nBitPredictor = (Integer) Config.get("n_predictor");
+    }
+
+    /* -------------- Conditional Branch Instructions Counter ------------------ */
+    public static void incrementBranchCount() {
+        branchCount++;
+    }
+
+    public static int getBranchCount() {
+        return branchCount;
+    }
+
+    public static void resetBranchCount(){
+        branchCount = 0;
     }
 }
